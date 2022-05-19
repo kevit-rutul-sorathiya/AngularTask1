@@ -14,5 +14,3 @@ you will able to see message 'Compiled successfully'
 
 4)And you will able to see angular project  
 
-Test check for push
-
