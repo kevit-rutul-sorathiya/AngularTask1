@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Task Manager</h2>
+  <div class="main">
+    <section class="section" *ngFor="let task of taskArr">
+      <div class="mainPart" *ngIf="taskName !== task" >
+        <div>{{task}}</div>
+        <div class="editButton" (click)="editTask(task)"><i class="fas fa-pen"></i></div>
+        <div class="deleteButton" (click)="deleteTask(task)"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      </div>
+      <div class="mainPart" *ngIf="taskName === task" >
+        <input class="form-control editInput" type="text"  placeholder="Add Task"  [(ngModel)]="editInput"  (blur)="abc(editInput)"/>
+      </div>
+    </section>
+  </div>
+  <section class="input">
+    <div>
+      <input class="addInput" type="text" placeholder="Add New Task" [(ngModel)]="inputTask" />
+    </div>
+    <div>
+      <button class="add" (click)="addTask()">save</button>
+    </div>
+  </section>
+</div>
+  
